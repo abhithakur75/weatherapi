@@ -62,7 +62,7 @@ function createWeatherCard(cityName2, weatherItem2, index2) {
         return `
     <li class="swiper-slide weather-data">
         <span>${weatherItem2.dt_txt.split(' ')[0]}</span>
-        <img src="http://openweathermap.org/img/wn/${weatherItem2.weather[0].icon}@2x.png" alt="forecast-image" class="forecast-img">
+        <img src="https://openweathermap.org/img/wn/${weatherItem2.weather[0].icon}@2x.png" alt="forecast-image" class="forecast-img">
         <div class="icon-overlay"></div>
         <small>${(weatherItem2.main.temp - 273.15).toFixed(2)}°</small>
     </li>
@@ -74,7 +74,7 @@ function createWeatherCard(cityName2, weatherItem2, index2) {
 
 //creating a function named gettingWeatherDetails
 function gettingWeatherDetails(cityWeather, lat, lon) {
-    const weather_api_url = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+    const weather_api_url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`;
 
     fetch(weather_api_url).then(res => res.json()).then(data => {
 
@@ -118,7 +118,7 @@ searchBtn.addEventListener('click', function () {
         return;
     }
     else {
-        const geocoding_api_url = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`;
+        const geocoding_api_url = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`;
         fetch(geocoding_api_url).then(res => res.json()).then(data => {
             if (!data.length) //if you enter wrong keyword or city name
             {
