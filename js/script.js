@@ -1,12 +1,4 @@
 
-
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
-    spaceBetween: 15,
-    freeMode: true,
-});
-
-//working on weather updates
 const searchBtn = document.querySelector('.searchBtn');
 const cityNameInput = document.querySelector('.citySearch');
 const apiKey = 'b8e6343adb114d2c88af0939f6b1a6c4';
@@ -16,14 +8,6 @@ const locationData = document.querySelector('.location-data');
 const weatherPallete = document.querySelector('.weather-pallete');
 const weatherUL = document.querySelector('.weather-ul');
 
-const gettingStartedBtn = document.querySelector('.getting-started-btn');
-
-gettingStartedBtn.addEventListener('click', function () {
-    document.querySelector('.frontpage').classList.add('active');
-    document.querySelector('.weather-container').classList.add('active');
-})
-
-// creating a function named createWeatherCard
 function createWeatherCard(cityName2, weatherItem2, index2) {
     if (index2 === 0) {
         return `
