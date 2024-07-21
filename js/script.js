@@ -1,7 +1,7 @@
 
 const searchBtn = document.querySelector('.searchBtn');
 const cityNameInput = document.querySelector('.citySearch');
-const apiKey = 'b8e6343adb114d2c88af0939f6b1a6c4';
+const apiKey = '2c5ece88bb1c00762f95b2fc480057bc';
 const weeks = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 const WeatherDegree = document.querySelector('.weatherInput');
 const locationData = document.querySelector('.location-data');
